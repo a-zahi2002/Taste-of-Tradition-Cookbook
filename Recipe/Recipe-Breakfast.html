@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="recipe.css">
+    <script>
+        // Function to show the selected recipe and hide others
+        function showRecipe(recipeId) {
+            const recipes = document.querySelectorAll('.recipe-detail');
+            recipes.forEach(recipe => {
+                recipe.style.display = 'none'; // Hide all recipes
+            });
+            const selectedRecipe = document.getElementById(recipeId);
+            if (selectedRecipe) {
+                selectedRecipe.style.display = 'block'; // Show the selected recipe
+            }
+        }
+
+        // Execute on page load to handle the URL hash
+        window.onload = function() {
+            const hash = window.location.hash;
+            if (hash) {
+                showRecipe(hash.substring(1)); // Remove the '#' and show the recipe
+            }
+        };
+    </script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="../Index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="../Index.html" class="dropbtn">Recipes</a>
+            <div class="dropdown-content">
+                <a href="../Breakfast.html">Breakfast</a>
+                <a href="../Lunch.html">Lunch</a>
+                <a href="../Dinner.html">Dinner</a>
+                <a href="../Dessert.html">Desserts</a>
+            </div>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+
+<!-- Recipe Sections -->
+<div class="recipe-detail" id="Paratha-recipe" style="display: none;">
+    <h1>Paratha</h1>
+
+    <img src="../Images/Paratha.jpg" alt="Paratha">
+
+    <h2>Ingredients</h2>
+    <ul>
+        <li>2 cups whole wheat flour</li>
+        <li>2 tbsp oil</li>
+        <li>Water as needed</li>
+        <li>Salt to taste</li>
+        <li>Ghee for frying</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Mix flour, salt, oil, and water to form a soft dough</li>
+        <li>Divide the dough into balls, roll them out, and fold with ghee</li>
+        <li>Roll out again and fry on a hot griddle with ghee until golden and crispy.</li>
+        <li>Serve with yogurt or pickles</li>
+    </ol>
+
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 25 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<div class="recipe-detail" id="Upma-recipe" style="display: none;">
+    <h1>Upma</h1>
+    <img src="../Images/Upma.jpg" alt="Upma">
+
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup semolina (rava)</li>
+        <li>2 tbsp oil</li>
+        <li>1 tsp mustard seeds</li>
+        <li>1 onion, chopped</li>
+        <li>1 green chili, chopped</li>
+        <li>Curry leaves</li>
+        <li>2 Cups water</li>
+        <li>Salt to taste</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Roast semolina in a pan until golden, set aside</li>
+        <li>Heat oil, add mustard seeds, onion, chili, and curry leaves, sauté</li>
+        <li>Add water and salt, bring to a boil</li>
+        <li>Stir in the roasted semolina, cook until thickened</li>
+        <li>Serve hot with chutney</li>
+    </ol>
+
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 20 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<div class="recipe-detail" id="Idli-recipe" style="display: none;">
+    <h1>Idli</h1>
+    <img src="../Images/Idli.jpg" alt="Idly">
+
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup urad dal (black gram)</li>
+        <li>2 cups rice</li>
+        <li>Salt to taste</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Soak urad dal and rice separately for 4-6 hours, grind to a smooth batter</li>
+        <li>Ferment overnight, add salt, and pour into idli molds</li>
+        <li>Steam for 10-12 minutes until fluffy</li>
+        <li>Serve with coconut chutney and sambar</li>
+    </ol>
+
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes (excluding fermentation)</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<div class="recipe-detail" id="Puttu-recipe" style="display: none;">
+    <h1>Puttu</h1>
+    <img src="../Images/Puttu.jpg" alt="Puttu">
+
+    <h2>Ingredients</h2>
+    <ul>
+        <li>2 cups rice flour</li>
+        <li>1 cup grated coconut</li>
+        <li>Salt to taste</li>
+        <li>Water as needed</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Mix rice flour, grated coconut, and salt</li>
+        <li>Add water gradually until the mixture resembles wet sand</li>
+        <li>Layer the mixture in a puttu steamer and steam for 10-12 minutes</li>
+        <li>Serve with bananas and curry</li>
+    </ol>
+
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 20 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<div class="recipe-detail" id="Aloo-Paratha-recipe" style="display: none;">
+    <h1>Aloo Paratha</h1>
+    <img src="../Images/Aloo-Paratha.jpg" alt="Aloo-Paratha">
+
+    <h2>Ingredients</h2>
+    <ul>
+        <li>2 cups whole wheat flour</li>
+        <li>2 boiled potatoes, mashed</li>
+        <li>1 tsp cumin seeds</li>
+        <li>1 green chili, chopped</li>
+        <li>Ghee for frying</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Prepare dough with wheat flour and water</li>
+        <li>Mix mashed potatoes with cumin, chili, and salt</li>
+        <li>Roll out the dough, stuff with potato mixture, and roll again</li>
+        <li>Fry on a hot griddle with ghee until crispy</li>
+        <li>Serve with yogurt and pickles</li>
+    </ol>
+
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 25 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<div class="recipe-detail" id="ChanaDalPancakes-recipe" style="display: none;">
+    <h1>Chana Dal Pancakes (Cheela)</h1>
+    <img src="../Images/ChanaDalPancakes.jpeg" alt="Chana Dal Pancakes (Cheela)">
+
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup chana dal (split chickpeas)</li>
+        <li>1 onion, finely chopped</li>
+        <li>1 green chili, chopped</li>
+        <li>1/2 tsp cumin seeds</li>
+        <li>Salt to taste</li>
+        <li>Oil for frying</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Soak chana dal for 4 hours, grind into a thick batter</li>
+        <li>Mix in onions, chili, cumin, and salt</li>
+        <li>Heat oil on a griddle and pour a ladle of batter, spread into a thin pancake</li>
+        <li>Cook on both sides until golden</li>
+        <li>Serve with chutney</li>
+    </ol>
+
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 25 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<div class="recipe-detail" id="CholeBhature-recipe" style="display: none;">
+    <h1>Chole Bhature</h1>
+    <img src="../Images/CholeBhature.jpg" alt="Chole Bhature">
+
+    <h2>Ingredients</h2>
+    <ul>
+        <li>2 cups all-purpose flour</li>
+        <li>1/2 cup yogurt</li>
+        <li>1 tsp baking powder</li>
+        <li>1 cup boiled chickpeas</li>
+        <li>1 onion, chopped</li>
+        <li>1 tsp cumin seeds</li>
+        <li>Spices: turmeric, chili powder, garam masala</li>
+        <li>Oil for frying</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Mix flour, baking powder, and yogurt to form a dough</li>
+        <li>For chole, sauté cumin, onion, and spices, add chickpeas and cook</li>
+        <li>Roll out the dough and deepfry into puffed bhature</li>
+        <li>Serve with chole (spicy chickpea curry)</li>
+    </ol>
+
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<div class="recipe-detail" id="Dhokla-recipe" style="display: none;">
+    <h1>Dhokla</h1>
+    <img src="../Images/Dhokla.jpg" alt="Dhokla">
+
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup gram flour (besan)</li>
+        <li>1 tbsp semolina</li>
+        <li>1 tbsp eno fruit salt</li>
+        <li>1 tbsp mustard seeds</li>
+        <li>1 green chilli, chopped</li>
+        <li>salt to taste</li>
+        <li>water as needed</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Mix gram flour, semolina, salt, and water into a thick batter</li>
+        <li>Add eno fruit salt just before steaming</li>
+        <li>Pour into a greased dish and steam for 15 minutes</li>
+        <li>Heat oil, mustard seeds, curry leaves, and chili, and pour over the dhokla</li>
+        <li>Serve with chutney</li>
+    </ol>
+
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+
+</div>
+
+<div class="recipe-detail" id="MeduVada-recipe" style="display: none;">
+    <h1>Dhokla</h1>
+    <img src="../Images/MeduVada.jpg" alt="Medu Vada">
+
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup urad dal (black gram)</li>
+        <li>1 onion, chopped</li>
+        <li>1 green chili, chopped</li>
+        <li>1/2 tsp cumin seeds</li>
+        <li>Salt to taste</li>
+        <li>Oil for frying</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Soak urad dal for 4 hours, grind into a thick batter</li>
+        <li>Mix in onions, chili, cumin, and salt</li>
+        <li>Shape the batter into doughnuts and deep fry until golden</li>
+        <li>Serve with chutney or sambar</li>
+    </ol>
+
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+
+</div>
+
+<a href="../Breakfast.html">Go Back</a>
+
+</body>
+</html>

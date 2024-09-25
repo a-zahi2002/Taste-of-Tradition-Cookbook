@@ -125,14 +125,50 @@ nav ul .dropdown:hover .dropdown-content {
     color: #003366;
 }
 
-footer{
-    background-color: #003366;;
-    text-align: center;
-    padding: 40px 0;
+/*footer styles*/
+footer {
+    background-color: #003366; /* Match with the header and nav bar */
     color: white;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto new lines */
+    justify-content: space-between; /* Spread items across the footer */
+    padding: 40px;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+}
 
+.footer-content,
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1; /* Makes each section take equal space */
+    min-width: 200px; /* Minimum width to ensure readability */
+    margin: 15px; /* Margin for spacing */
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #4A90E2; /* Use a link color that stands out against the footer background */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Add hover effect for links */
+}
+
+.footer-social img {
+    width: 30px; /* Icon size */
+    margin: 0 5px;
+}
+
+.footer-bottom {
+    text-align: center; /* Center the copyright notice */
+    width: 100%; /* Ensure it spans the full width */
+    margin-top: 20px; /* Spacing above the copyright */
+}
+.footer p{
+    text-align: justify;
 }

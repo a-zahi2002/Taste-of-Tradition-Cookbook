@@ -106,6 +106,7 @@ nav ul .dropdown:hover .dropdown-content {
 
 .recipe-card img {
     width: 100%;
+    height: 75%;
     border-radius: 10px;
 }
 
@@ -123,3 +124,67 @@ nav ul .dropdown:hover .dropdown-content {
     text-decoration: none;
     color: #003366;
 }
+
+/* Back button */
+a.backbtn {
+    display: inline-block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px 30px;
+    background-color: #00509e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+/*footer styles*/
+footer {
+    background-color: #003366; /* Match with the header and nav bar */
+    color: white;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto new lines */
+    justify-content: space-between; /* Spread items across the footer */
+    padding: 40px;
+    width: 100%;
+}
+
+.footer-content,
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1; /* Makes each section take equal space */
+    min-width: 200px; /* Minimum width to ensure readability */
+    margin: 15px; /* Margin for spacing */
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #4A90E2; /* Use a link color that stands out against the footer background */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Add hover effect for links */
+}
+
+.footer-social img {
+    width: 30px; /* Icon size */
+    margin: 0 5px;
+}
+
+.footer-bottom {
+    text-align: center; /* Center the copyright notice */
+    width: 100%; /* Ensure it spans the full width */
+    margin-top: 20px; /* Spacing above the copyright */
+}
+.footer p{
+    text-align: justify;
+}
+
+

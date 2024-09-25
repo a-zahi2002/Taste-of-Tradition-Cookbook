@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="recipe.css">
+    <script>
+        // Function to show the selected recipe and hide others
+        function showRecipe(recipeId) {
+            const recipes = document.querySelectorAll('.recipe-detail');
+            recipes.forEach(recipe => {
+                recipe.style.display = 'none'; // Hide all recipes
+            });
+            const selectedRecipe = document.getElementById(recipeId);
+            if (selectedRecipe) {
+                selectedRecipe.style.display = 'block'; // Show the selected recipe
+            }
+        }
+
+        // Execute on page load to handle the URL hash
+        window.onload = function() {
+            const hash = window.location.hash;
+            if (hash) {
+                showRecipe(hash.substring(1)); // Remove the '#' and show the recipe
+            }
+        };
+    </script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="../Index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="../Index.html" class="dropbtn">Recipes</a>
+            <div class="dropdown-content">
+                <a href="../Breakfast.html">Breakfast</a>
+                <a href="../Lunch.html">Lunch</a>
+                <a href="../Dinner.html">Dinner</a>
+                <a href="../Dessert.html">Desserts</a>
+            </div>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+
+<!-- Recipe Sections -->
+<!--Vegetable Biryani-->
+<div class="recipe-detail" id="VegetableBiryani-recipe" style="display: none;">
+    <h1>Vegetable Biryani</h1>
+
+    <img src="../Images/VegetableBiryani.jpg" alt="Vegetable Biryani">
+
+    <h2>Ingredients</h2>
+    <ul>
+        <li>2 cups basmati rice/li>
+        <li>1 onion, sliced</li>
+        <li>1 cup mixed vegetables (carrot, peas, potatoes)</li>
+        <li>2 tbsp biryani masala</li>
+        <li>1 tsp cumin seeds</li>
+        <li>2 tbsp ghee</li>
+        <li>Salt to taste</li>
+        <li>Fresh coriander for garnish</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Cook basmati rice until fluffy and set aside</li>
+        <li>Heat ghee in a pot, add cumin and onions, sauté until golden</li>
+        <li>Add vegetables, biryani masala, and salt, cook for 10 minutes</li>
+        <li>Layer the rice over the vegetable mixture, cover, and steam for 10 minutes</li>
+        <li>Garnish with fresh coriander and serve with raita</li>
+    </ol>
+
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 40 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Mutton Curry -->
+<div class="recipe-detail" id="MuttonCurry-recipe" style="display: none;">
+    <h1>Mutton Curry</h1>
+    <img src="../Images/MuttonCurry.jpg" alt="Mutton Curry">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>500g mutton, cut into pieces</li>
+        <li>1 onion, chopped</li>
+        <li>2 tomatoes, chopped</li>
+        <li>1 tbsp ginger-garlic paste</li>
+        <li>2 tsp curry powder</li>
+        <li>1 tsp turmeric powder</li>
+        <li>1 tsp cumin seeds</li>
+        <li>2 tbsp oil</li>
+        <li>Salt to taste</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Heat oil, add cumin seeds and onions, sauté until golden.</li>
+        <li>Add ginger-garlic paste and tomatoes, cook until soft.</li>
+        <li>Add mutton, curry powder, turmeric, and salt, cook until browned.</li>
+        <li>Add water, cover, and simmer for 40 minutes until the mutton is tender.</li>
+        <li>Serve with rice or roti.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 1 hour</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Paneer Butter Masala -->
+<div class="recipe-detail" id="PaneerButterMasala-recipe" style="display: none;">
+    <h1>Paneer Butter Masala</h1>
+    <img src="../Images/PaneerButterMasala.jpg" alt="Paneer Butter Masala">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>200g paneer, cubed</li>
+        <li>1 onion, chopped</li>
+        <li>2 tomatoes, pureed</li>
+        <li>1 tbsp butter</li>
+        <li>1 tsp garam masala</li>
+        <li>1 tsp turmeric powder</li>
+        <li>2 tbsp cream</li>
+        <li>Salt to taste</li>
+        <li>Fresh coriander for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Heat butter, add onions, and sauté until soft.</li>
+        <li>Add tomato puree, garam masala, turmeric, and salt, cook for 5 minutes.</li>
+        <li>Add paneer cubes and simmer for 10 minutes.</li>
+        <li>Stir in cream and garnish with coriander.</li>
+        <li>Serve with naan or rice.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Chickpea Curry (Chana Masala) -->
+<div class="recipe-detail" id="ChickpeaCurry-recipe" style="display: none;">
+    <h1>Chickpea Curry (Chana Masala)</h1>
+    <img src="../Images/ChickpeaCurry.jpg" alt="Chickpea Curry">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup boiled chickpeas</li>
+        <li>1 onion, chopped</li>
+        <li>2 tomatoes, chopped</li>
+        <li>1 tsp cumin seeds</li>
+        <li>1 tsp garam masala</li>
+        <li>1 tsp turmeric powder</li>
+        <li>1 tbsp oil</li>
+        <li>Salt to taste</li>
+        <li>Fresh coriander for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Heat oil, add cumin seeds and onions, sauté until golden.</li>
+        <li>Add tomatoes, turmeric, garam masala, and salt, cook until tomatoes soften.</li>
+        <li>Add boiled chickpeas and simmer for 10 minutes.</li>
+        <li>Garnish with fresh coriander and serve with rice or flatbread.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Spinach Dal (Palak Dal) -->
+<div class="recipe-detail" id="SpinachDal-recipe" style="display: none;">
+    <h1>Spinach Dal (Palak Dal)</h1>
+    <img src="../Images/SpinachDal.jpg" alt="Spinach Dal">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup toor dal</li>
+        <li>2 cups spinach, chopped</li>
+        <li>1 onion, chopped</li>
+        <li>1 tsp mustard seeds</li>
+        <li>1 tsp turmeric powder</li>
+        <li>2 green chilies, chopped</li>
+        <li>1 tbsp oil</li>
+        <li>Salt to taste</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Boil the toor dal with turmeric until soft, set aside.</li>
+        <li>Heat oil, add mustard seeds, onions, and green chilies, sauté until soft.</li>
+        <li>Add spinach and cook until wilted.</li>
+        <li>Stir in the boiled dal and simmer for 10 minutes.</li>
+        <li>Serve with rice or roti.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Vegetable Khichdi -->
+<div class="recipe-detail" id="VegetableKhichdi-recipe" style="display: none;">
+    <h1>Vegetable Khichdi</h1>
+    <img src="../Images/VegetableKhichdi.jpg" alt="Vegetable Khichdi">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup rice</li>
+        <li>1/2 cup moong dal</li>
+        <li>1 carrot, chopped</li>
+        <li>1 potato, diced</li>
+        <li>1 tsp cumin seeds</li>
+        <li>1 tsp turmeric powder</li>
+        <li>2 tbsp ghee</li>
+        <li>Salt to taste</li>
+        <li>Fresh coriander for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Wash rice and dal together, then cook with water until soft.</li>
+        <li>Heat ghee, add cumin seeds and vegetables, sauté for 5 minutes.</li>
+        <li>Add the cooked rice and dal mixture, turmeric, and salt.</li>
+        <li>Cook for another 10 minutes, stirring occasionally.</li>
+        <li>Garnish with coriander and serve with pickle or yogurt.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Fish Curry -->
+<div class="recipe-detail" id="FishCurry-recipe" style="display: none;">
+    <h1>Fish Curry</h1>
+    <img src="../Images/FishCurry.jpg" alt="Fish Curry">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>500g fish, cut into pieces</li>
+        <li>1 onion, chopped</li>
+        <li>2 tomatoes, chopped</li>
+        <li>2 tbsp curry powder</li>
+        <li>1 tsp turmeric powder</li>
+        <li>1 tsp mustard seeds</li>
+        <li>2 tbsp coconut milk</li>
+        <li>2 tbsp oil</li>
+        <li>Salt to taste</li>
+        <li>Fresh coriander for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Heat oil, add mustard seeds and onions, sauté until golden.</li>
+        <li>Add tomatoes, curry powder, turmeric, and salt, cook until soft.</li>
+        <li>Add fish pieces and coconut milk, simmer for 10 minutes until the fish is cooked.</li>
+        <li>Garnish with fresh coriander and serve with rice or flatbread.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Eggplant Fry (Baingan Bharta) -->
+<div class="recipe-detail" id="EggplantFry-recipe" style="display: none;">
+    <h1>Eggplant Fry (Baingan Bharta)</h1>
+    <img src="../Images/EggplantFry.jpg" alt="Eggplant Fry">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 large eggplant</li>
+        <li>1 onion, chopped</li>
+        <li>2 tomatoes, chopped</li>
+        <li>1 tsp cumin seeds</li>
+        <li>1 tsp garam masala</li>
+        <li>1 tsp turmeric powder</li>
+        <li>2 tbsp oil</li>
+        <li>Salt to taste</li>
+        <li>Fresh coriander for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Roast the eggplant over an open flame until the skin is charred, peel, and mash it.</li>
+        <li>Heat oil, add cumin seeds and onions, sauté until golden.</li>
+        <li>Add tomatoes, garam masala, turmeric, and salt, cook until soft.</li>
+        <li>Stir in the mashed eggplant and cook for 10 minutes.</li>
+        <li>Garnish with coriander and serve with flatbread or rice.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Chicken Biryani -->
+<div class="recipe-detail" id="ChickenBiryani-recipe" style="display: none;">
+    <h1>Chicken Biryani</h1>
+    <img src="../Images/ChickenBiryani.jpg" alt="Chicken Biryani">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>2 cups basmati rice</li>
+        <li>500g chicken, cut into pieces</li>
+        <li>1 onion, sliced</li>
+        <li>1 cup yogurt</li>
+        <li>2 tbsp biryani masala</li>
+        <li>1 tsp cumin seeds</li>
+        <li>2 tbsp ghee</li>
+        <li>Salt to taste</li>
+        <li>Fresh coriander for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Cook basmati rice until fluffy and set aside.</li>
+        <li>Marinate the chicken in yogurt, biryani masala, and salt for 30 minutes.</li>
+        <li>Heat ghee in a pot, add cumin and onions, sauté until golden.</li>
+        <li>Add marinated chicken, cook for 15 minutes.</li>
+        <li>Layer the rice over the chicken, cover, and steam for 10 minutes.</li>
+        <li>Garnish with fresh coriander and serve with raita.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 1 hour</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+
+
+<a href="../Lunch.html">Go Back</a>
+
+</body>
+</html>
