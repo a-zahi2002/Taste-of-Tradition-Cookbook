@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="recipe.css">
+    <script>
+        // Function to show the selected recipe and hide others
+        function showRecipe(recipeId) {
+            const recipes = document.querySelectorAll('.recipe-detail');
+            recipes.forEach(recipe => {
+                recipe.style.display = 'none'; // Hide all recipes
+            });
+            const selectedRecipe = document.getElementById(recipeId);
+            if (selectedRecipe) {
+                selectedRecipe.style.display = 'block'; // Show the selected recipe
+            }
+        }
+
+        // Execute on page load to handle the URL hash
+        window.onload = function() {
+            const hash = window.location.hash;
+            if (hash) {
+                showRecipe(hash.substring(1)); // Remove the '#' and show the recipe
+            }
+        };
+    </script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="../Index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="../Index.html" class="dropbtn">Recipes</a>
+            <div class="dropdown-content">
+                <a href="../Breakfast.html">Breakfast</a>
+                <a href="../Lunch.html">Lunch</a>
+                <a href="../Dinner.html">Dinner</a>
+                <a href="../Dessert.html">Desserts</a>
+            </div>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+
+<!-- Recipe Sections -->
+<!-- Chicken Curry -->
+<div class="recipe-detail" id="ChickenCurry-recipe" style="display: none;">
+    <h1>Chicken Curry</h1>
+    <img src="../Images/ChickenCurry.jpg" alt="Chicken Curry">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>500g chicken, cut into pieces</li>
+        <li>1 onion, chopped</li>
+        <li>2 tomatoes, chopped</li>
+        <li>1 tbsp ginger-garlic paste</li>
+        <li>1 tbsp curry powder</li>
+        <li>1 tsp cumin seeds</li>
+        <li>1 tbsp oil</li>
+        <li>Salt to taste</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Heat oil, add cumin seeds and onions, sauté until golden.</li>
+        <li>Add ginger-garlic paste and tomatoes, cook until soft.</li>
+        <li>Add chicken, curry powder, and salt, cook for 20 minutes.</li>
+        <li>Simmer until the chicken is cooked and serve with rice or flatbread.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 45 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Beef Fry -->
+<div class="recipe-detail" id="BeefFry-recipe" style="display: none;">
+    <h1>Beef Fry</h1>
+    <img src="../Images/BeefFry.jpg" alt="Beef Fry">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>500g beef, sliced</li>
+        <li>1 onion, sliced</li>
+        <li>2 tbsp ginger-garlic paste</li>
+        <li>1 tsp black pepper</li>
+        <li>1 tsp cumin powder</li>
+        <li>1 tsp coriander powder</li>
+        <li>1 tbsp oil</li>
+        <li>Salt to taste</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Heat oil, add onions, and sauté until golden.</li>
+        <li>Add ginger-garlic paste, beef, and spices, cook for 10 minutes.</li>
+        <li>Simmer until beef is tender and well-cooked.</li>
+        <li>Serve hot with flatbread or rice.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 1 hour</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Dal Tadka -->
+<div class="recipe-detail" id="DalTadka-recipe" style="display: none;">
+    <h1>Dal Tadka</h1>
+    <img src="../Images/DalTadka.jpg" alt="Dal Tadka">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup toor dal</li>
+        <li>1 onion, chopped</li>
+        <li>2 tomatoes, chopped</li>
+        <li>1 tsp cumin seeds</li>
+        <li>1 tsp turmeric powder</li>
+        <li>2 dried red chilies</li>
+        <li>2 tbsp oil</li>
+        <li>Salt to taste</li>
+        <li>Fresh coriander for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Boil the dal with turmeric until soft, set aside.</li>
+        <li>Heat oil, add cumin seeds and onions, sauté until golden.</li>
+        <li>Add tomatoes, red chilies, and salt, cook for 5 minutes.</li>
+        <li>Stir in the boiled dal and simmer for 10 minutes.</li>
+        <li>Garnish with fresh coriander and serve with rice or roti.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Prawn Masala -->
+<div class="recipe-detail" id="PrawnMasala-recipe" style="display: none;">
+    <h1>Prawn Masala</h1>
+    <img src="../Images/PrawnMasala.jpg" alt="Prawn Masala">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>500g prawns, cleaned</li>
+        <li>1 onion, sliced</li>
+        <li>2 tomatoes, chopped</li>
+        <li>1 tbsp ginger-garlic paste</li>
+        <li>1 tbsp curry powder</li>
+        <li>1 tsp turmeric powder</li>
+        <li>2 tbsp oil</li>
+        <li>Salt to taste</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Heat oil, add onions and sauté until golden.</li>
+        <li>Add ginger-garlic paste and tomatoes, cook until soft.</li>
+        <li>Add prawns, curry powder, turmeric, and salt, cook for 10 minutes.</li>
+        <li>Simmer for an additional 5 minutes and serve with rice.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 25 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Mixed Vegetable Curry -->
+<div class="recipe-detail" id="MixedVegetableCurry-recipe" style="display: none;">
+    <h1>Mixed Vegetable Curry</h1>
+    <img src="../Images/MixedVegetableCurry.jpg" alt="Mixed Vegetable Curry">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup mixed vegetables (carrots, peas, potatoes)</li>
+        <li>1 onion, chopped</li>
+        <li>1 tsp cumin seeds</li>
+        <li>1 tsp turmeric powder</li>
+        <li>1 tsp garam masala</li>
+        <li>2 tbsp oil</li>
+        <li>Salt to taste</li>
+        <li>Fresh coriander for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Heat oil, add cumin seeds and onions, sauté until golden.</li>
+        <li>Add vegetables, turmeric, garam masala, and salt, cook for 10 minutes.</li>
+        <li>Simmer until vegetables are tender.</li>
+        <li>Garnish with fresh coriander and serve with rice or roti.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Egg Curry -->
+<div class="recipe-detail" id="EggCurry-recipe" style="display: none;">
+    <h1>Egg Curry</h1>
+    <img src="../Images/EggCurry.jpg" alt="Egg Curry">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>4 boiled eggs, peeled</li>
+        <li>1 onion, chopped</li>
+        <li>2 tomatoes, chopped</li>
+        <li>1 tsp cumin seeds</li>
+        <li>1 tbsp curry powder</li>
+        <li>1 tsp turmeric powder</li>
+        <li>2 tbsp oil</li>
+        <li>Salt to taste</li>
+        <li>Fresh coriander for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Heat oil, add cumin seeds and onions, sauté until golden.</li>
+        <li>Add tomatoes, curry powder, turmeric, and salt, cook until soft.</li>
+        <li>Add boiled eggs and simmer for 10 minutes.</li>
+        <li>Garnish with fresh coriander and serve with rice or flatbread.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Vegetable Pulao -->
+<div class="recipe-detail" id="VegetablePulao-recipe" style="display: none;">
+    <h1>Vegetable Pulao</h1>
+    <img src="../Images/VegetablePulao.jpg" alt="Vegetable Pulao">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup basmati rice</li>
+        <li>1 cup mixed vegetables (peas, carrots, beans)</li>
+        <li>1 onion, sliced</li>
+        <li>1 tsp cumin seeds</li>
+        <li>1 bay leaf</li>
+        <li>2 cloves</li>
+        <li>1 tbsp oil</li>
+        <li>Salt to taste</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Boil rice and set aside.</li>
+        <li>Heat oil, add cumin seeds, bay leaf, and cloves, sauté for a minute.</li>
+        <li>Add onions and mixed vegetables, cook for 5 minutes.</li>
+        <li>Add cooked rice, salt, and mix well.</li>
+        <li>Simmer for 5 minutes and serve hot.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Fish Fry -->
+<div class="recipe-detail" id="FishFry-recipe" style="display: none;">
+    <h1>Fish Fry</h1>
+    <img src="../Images/FishFry.jpg" alt="Fish Fry">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>4 fish fillets</li>
+        <li>1 tbsp ginger-garlic paste</li>
+        <li>1 tsp turmeric powder</li>
+        <li>1 tsp red chili powder</li>
+        <li>1 tsp coriander powder</li>
+        <li>1 tbsp oil</li>
+        <li>Salt to taste</li>
+        <li>Lemon wedges for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Marinate fish with ginger-garlic paste, turmeric, chili powder, coriander, and salt.</li>
+        <li>Heat oil in a pan and fry fish until golden brown.</li>
+        <li>Serve hot with lemon wedges.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 25 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Lamb Stew -->
+<div class="recipe-detail" id="LambStew-recipe" style="display: none;">
+    <h1>Lamb Stew</h1>
+    <img src="../Images/LambStew.jpg" alt="Lamb Stew">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>500g lamb, cubed</li>
+        <li>1 onion, sliced</li>
+        <li>2 tomatoes, chopped</li>
+        <li>2 carrots, sliced</li>
+        <li>1 tsp cumin powder</li>
+        <li>1 tsp coriander powder</li>
+        <li>1 tsp black pepper</li>
+        <li>2 tbsp oil</li>
+        <li>Salt to taste</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Heat oil, add onions, and sauté until golden.</li>
+        <li>Add lamb, tomatoes, and spices, cook for 10 minutes.</li>
+        <li>Add carrots and water, simmer for 1 hour until lamb is tender.</li>
+        <li>Serve hot with rice or bread.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 1 hour 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<a href="../Dinner.html">Go Back</a>
+
+</body>
+</html>
