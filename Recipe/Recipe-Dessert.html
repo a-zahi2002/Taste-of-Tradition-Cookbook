@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="Recipe.css">
+    <script>
+        // Function to show the selected recipe and hide others
+        function showRecipe(recipeId) {
+            const recipes = document.querySelectorAll('.recipe-detail');
+            recipes.forEach(recipe => {
+                recipe.style.display = 'none'; // Hide all recipes
+            });
+            const selectedRecipe = document.getElementById(recipeId);
+            if (selectedRecipe) {
+                selectedRecipe.style.display = 'block'; // Show the selected recipe
+            }
+        }
+
+        // Execute on page load to handle the URL hash
+        window.onload = function() {
+            const hash = window.location.hash;
+            if (hash) {
+                showRecipe(hash.substring(1)); // Remove the '#' and show the recipe
+            }
+        };
+    </script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="../Index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="../Index.html" class="dropbtn">Recipes</a>
+            <div class="dropdown-content">
+                <a href="../Breakfast.html">Breakfast</a>
+                <a href="../Lunch.html">Lunch</a>
+                <a href="../Dinner.html">Dinner</a>
+                <a href="../Dessert.html">Desserts</a>
+            </div>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+
+<!-- Recipe Sections -->
+<!-- Gulab Jamun -->
+<div class="recipe-detail" id="GulabJamun-recipe" style="display: none;">
+    <h1>Gulab Jamun</h1>
+    <img src="../Images/GulabJamun.jpg" alt="Gulab Jamun">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup milk powder</li>
+        <li>2 tbsp all-purpose flour</li>
+        <li>1/4 cup milk</li>
+        <li>1 tbsp ghee</li>
+        <li>1 cup sugar</li>
+        <li>1 cup water</li>
+        <li>Oil for frying</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Mix milk powder, flour, milk, and ghee to form a dough.</li>
+        <li>Shape into small balls and fry in oil until golden brown.</li>
+        <li>Boil sugar and water to make syrup, then soak the fried balls in syrup.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 45 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Watalappan -->
+<div class="recipe-detail" id="Watalappan-recipe" style="display: none;">
+    <h1>Watalappan</h1>
+    <img src="../Images/Watalappan.jpg" alt="Watalappan">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup coconut milk</li>
+        <li>1 cup jaggery (or brown sugar)</li>
+        <li>4 eggs</li>
+        <li>1/4 tsp cardamom powder</li>
+        <li>1/4 tsp nutmeg powder</li>
+        <li>Cashews for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Beat eggs and mix with coconut milk, jaggery, cardamom, and nutmeg.</li>
+        <li>Steam the mixture for 30 minutes until set.</li>
+        <li>Garnish with cashews and serve.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 1 hour</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Kheer -->
+<div class="recipe-detail" id="Kheer-recipe" style="display: none;">
+    <h1>Kheer</h1>
+    <img src="../Images/Kheer.jpg" alt="Kheer">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1/2 cup rice</li>
+        <li>4 cups milk</li>
+        <li>1/4 cup sugar</li>
+        <li>2 tbsp chopped nuts (almonds, pistachios)</li>
+        <li>1/4 tsp cardamom powder</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Cook rice in milk until soft.</li>
+        <li>Add sugar, nuts, and cardamom, and simmer for 10 minutes.</li>
+        <li>Serve chilled or warm.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 45 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Rava Kesari -->
+<div class="recipe-detail" id="RavaKesari-recipe" style="display: none;">
+    <h1>Rava Kesari</h1>
+    <img src="../Images/RavaKesari.jpg" alt="Rava Kesari">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1/2 cup semolina (rava)</li>
+        <li>1/4 cup ghee</li>
+        <li>1/2 cup sugar</li>
+        <li>1 1/2 cups water</li>
+        <li>1/4 tsp cardamom powder</li>
+        <li>A few saffron strands</li>
+        <li>Cashews and raisins for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Roast semolina in ghee until golden.</li>
+        <li>Boil water, add saffron and sugar, then mix into semolina.</li>
+        <li>Cook until thickened, and garnish with cashews and raisins.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Coconut Burfi -->
+<div class="recipe-detail" id="CoconutBurfi-recipe" style="display: none;">
+    <h1>Coconut Burfi</h1>
+    <img src="../Images/CoconutBurfi.jpg" alt="Coconut Burfi">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>2 cups grated coconut</li>
+        <li>1 1/2 cups sugar</li>
+        <li>1/2 cup milk</li>
+        <li>1/4 tsp cardamom powder</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Heat milk and sugar until dissolved.</li>
+        <li>Add coconut and cook until the mixture thickens.</li>
+        <li>Pour into a greased tray, let it cool, then cut into squares.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Semolina Pudding -->
+<div class="recipe-detail" id="SemolinaPudding-recipe" style="display: none;">
+    <h1>Semolina Pudding</h1>
+    <img src="../Images/SemolinaPudding.jpg" alt="Semolina Pudding">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1/2 cup semolina</li>
+        <li>2 cups milk</li>
+        <li>1/4 cup sugar</li>
+        <li>1 tsp vanilla essence</li>
+        <li>Chopped nuts for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Roast semolina in a pan until golden brown.</li>
+        <li>Add milk and sugar, cook until thickened.</li>
+        <li>Stir in vanilla essence and serve garnished with nuts.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Carrot Halwa -->
+<div class="recipe-detail" id="CarrotHalwa-recipe" style="display: none;">
+    <h1>Carrot Halwa</h1>
+    <img src="../Images/CarrotHalwa.jpg" alt="Carrot Halwa">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>4 cups grated carrots</li>
+        <li>2 cups milk</li>
+        <li>1/4 cup sugar</li>
+        <li>2 tbsp ghee</li>
+        <li>2 tbsp chopped nuts</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Cook grated carrots in milk until soft.</li>
+        <li>Add sugar and ghee, and cook until thickened.</li>
+        <li>Garnish with nuts and serve.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 45 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Milk Toffee -->
+<div class="recipe-detail" id="MilkToffee-recipe" style="display: none;">
+    <h1>Milk Toffee</h1>
+    <img src="../Images/MilkToffee.jpg" alt="Milk Toffee">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 can condensed milk</li>
+        <li>1/2 cup sugar</li>
+        <li>1/4 cup chopped cashews</li>
+        <li>1/4 tsp vanilla essence</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Mix condensed milk and sugar in a pan and cook on low heat.</li>
+        <li>Stir until the mixture thickens and leaves the sides of the pan.</li>
+        <li>Add cashews and vanilla essence, pour into a greased tray, and cut into pieces once cool.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 45 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Payasam -->
+<div class="recipe-detail" id="Payasam-recipe" style="display: none;">
+    <h1>Payasam</h1>
+    <img src="../Images/Payasam.jpg" alt="Payasam">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1/2 cup vermicelli</li>
+        <li>2 cups milk</li>
+        <li>1/4 cup sugar</li>
+        <li>2 tbsp ghee</li>
+        <li>1/4 tsp cardamom powder</li>
+        <li>Chopped nuts for garnish</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Roast vermicelli in ghee until golden brown.</li>
+        <li>Add milk and sugar, and cook until vermicelli is soft.</li>
+        <li>Garnish with cardamom powder and nuts, serve warm.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+<!-- Jalebi -->
+<div class="recipe-detail" id="Jalebi-recipe" style="display: none;">
+    <h1>Jalebi</h1>
+    <img src="../Images/Jalebi.jpg" alt="Jalebi">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup all-purpose flour</li>
+        <li>2 tbsp yogurt</li>
+        <li>1/4 tsp baking powder</li>
+        <li>1 cup sugar</li>
+        <li>1/2 cup water</li>
+        <li>Oil for frying</li>
+        <li>A pinch of saffron (optional)</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Make a batter with flour, yogurt, and water, then let it ferment for 4 hours.</li>
+        <li>Make a sugar syrup by boiling sugar and water.</li>
+        <li>Pipe the batter into hot oil in spiral shapes and fry until crispy.</li>
+        <li>Soak the fried jalebis in sugar syrup and serve.</li>
+    </ol>
+    <h2>Details</h2>
+    <p><strong>Cooking Time:</strong> 1 hour</p>
+    <p><strong>Servings:</strong> 4</p>
+</div>
+
+
+<a href="../Dessert.html">Go Back</a>
+
+</body>
+</html>
