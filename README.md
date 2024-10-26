@@ -22,7 +22,7 @@ Welcome to **Taste of Tradition**! This is a simple and elegant cookbook website
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/TasteOfTradition-Cookbook.git
+    git clone https://github.com/fengzhi-123/TasteOfTradition-Cookbook.git
     ```
 2. Navigate to the project folder and open the `Index.html` file in your web browser.
 
