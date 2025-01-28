@@ -150,7 +150,9 @@ footer {
     width: 100%;
 }
 
-
+.footer-content,
+.footer-links,
+.footer-contact,
 .footer-social {
     flex: 1;
     min-width: 200px;
@@ -181,8 +183,4 @@ footer {
     width: 100%;
     margin-top: 20px;
 }
-.footer p{
-    text-align: justify;
-}
-
 
